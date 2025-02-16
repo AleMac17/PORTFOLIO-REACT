@@ -51,7 +51,7 @@ export default function HeroSection() {
       <AnimatePresence>
         {showImage && (
           <motion.img
-            src="/hero-img.png"
+            src="/hero-image.png"
             alt="Sophisticated Effect"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 0.7, y: 0 }}
