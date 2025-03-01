@@ -185,7 +185,7 @@ export function Menu() {
                             </DialogTitle>
                             <DialogDescription className="text-gray-400 mt-3">
                                 Choose the language in which you want to view
-                                your CV.
+                                my CV.
                             </DialogDescription>
                         </DialogHeader>
                         <div className="px-6 py-4 space-y-5">
