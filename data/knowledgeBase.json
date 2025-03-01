@@ -7,14 +7,16 @@
                     "¿Cuál es el puesto actual de Alejandro?",
                     "¿Dónde trabaja Alejandro actualmente?",
                     "¿Desde cuándo trabaja Alejandro en Ensolvers?",
-                    "trabajo actual alejandro"
+                    "trabajo actual alejandro",
+                    "empleador actual"
                 ],
                 "en": [
                     "What company does Alejandro currently work for?",
                     "What is Alejandro's current position?",
                     "Where does Alejandro currently work?",
                     "Since when has Alejandro been working at Ensolvers?",
-                    "alejandro current job"
+                    "alejandro current job",
+                    "current employer"
                 ]
             },
             "answer": {
@@ -40,8 +42,8 @@
                 ]
             },
             "answer": {
-                "es": "En Ensolvers, Alejandro ha migrado aplicaciones de React de la versión 17 a la 18, actualizado AWS SDK en un proyecto Java, revisado y resuelto vulnerabilidades, desarrollado recursos y servicios en Node.js (NestJS), React y Java (Spring Boot), creado y modificado componentes en React, y desarrollado y mantenido pipelines de CI/CD.",
-                "en": "At Ensolvers, Alejandro has migrated React applications from version 17 to 18, updated the AWS SDK in a Java project, reviewed and resolved vulnerabilities, developed resources and services in Node.js (NestJS), React, and Java (Spring Boot), created and modified React components, and developed and maintained CI/CD pipelines."
+                "es": "En Ensolvers, Alejandro ha migrado aplicaciones de React (v17 a v18), actualizado AWS SDK (v1 a v2) en proyectos Java, resuelto vulnerabilidades, desarrollado APIs con Node.js (NestJS) y Java (Spring Boot), creado componentes React, y gestionado pipelines de CI/CD (Bitbucket, SonarQube).",
+                "en": "At Ensolvers, Alejandro has migrated React applications (v17 to v18), updated the AWS SDK (v1 to v2) in Java projects, resolved vulnerabilities, developed APIs with Node.js (NestJS) and Java (Spring Boot), created React components, and managed CI/CD pipelines (Bitbucket, SonarQube)."
             }
         },
         {
@@ -169,36 +171,20 @@
             }
         },
         {
-            "questions": {
-                "es": [
-                    "¿Qué experiencia tiene Alejandro como desarrollador web independiente?",
-                    "experiencia independiente",
-                    "freelance"
-                ],
-                "en": [
-                    "What experience does Alejandro have as an independent web developer?",
-                    "independent experience",
-                    "freelance"
-                ]
-            },
+           "questions": {
+             "es":["¿Qué experiencia tiene Alejandro como desarrollador web independiente?", "experiencia independiente", "freelance"],
+             "en": ["What experience does Alejandro have as an independent web developer?", "independent experience", "freelance"]
+           },
             "answer": {
                 "es": "Como desarrollador web independiente en Santa Fe, Argentina, desde febrero de 2022 hasta mayo de 2024, Alejandro gestionó clientes, adaptó y resolvió problemas en proyectos a medida, aplicando buenas prácticas de desarrollo y metodologías ágiles.",
                 "en": "As an independent web developer in Santa Fe, Argentina, from February 2022 to May 2024, Alejandro managed clients, adapted and solved problems in custom projects, applying good development practices and agile methodologies."
             }
         },
         {
-            "questions": {
-                "es": [
-                    "¿Qué tareas realizó Alejandro en Coverit?",
-                    "experiencia Coverit",
-                    "Coverit"
-                ],
-                "en": [
-                    "What tasks did Alejandro perform at Coverit?",
-                    "Coverit experience",
-                    "Coverit"
-                ]
-            },
+           "questions": {
+             "es":["¿Qué tareas realizó Alejandro en Coverit?", "experiencia Coverit", "Coverit"],
+             "en":["What tasks did Alejandro perform at Coverit?", "Coverit experience", "Coverit"]
+           },
             "answer": {
                 "es": "En Coverit, Alejandro desarrolló páginas web en equipo, utilizando JavaScript, WordPress y tecnologías relacionadas, asegurando funcionalidades optimizadas y diseño responsivo.",
                 "en": "At Coverit, Alejandro developed web pages as part of a team, using JavaScript, WordPress, and related technologies, ensuring optimized functionalities and responsive design."
@@ -265,6 +251,26 @@
             "answer": {
                 "es": "Alejandro tiene experiencia en React, incluyendo la migración de aplicaciones de la versión 17 a la 18 y la creación/modificación de componentes.",
                 "en": "Alejandro has experience in React, including migrating applications from version 17 to 18 and creating/modifying components."
+            }
+        },
+        {
+            "questions": {
+                "es": ["experiencia laboral", "trabajos", "empleos", "proyectos"],
+                "en": ["work experience", "jobs", "employment", "projects"]
+            },
+            "answer": {
+                "es": "La experiencia laboral de Alejandro incluye:\n\n* **Ensolvers** (Software Engineer, Remoto, EE.UU., Feb 2024 - Actualidad): Migración de aplicaciones React, actualización de AWS SDK, desarrollo con Node.js (NestJS), React y Java (Spring Boot), y mantenimiento de pipelines CI/CD.\n\n* **Desarrollador Web Independiente** (Santa Fe, Argentina, Feb 2022 - Mayo 2024): Gestión de clientes y desarrollo de proyectos web a medida.\n\n* **Coverit** (Desarrollador Web, Santa Fe, Argentina, Feb 2022 - Ago 2023): Desarrollo de páginas web utilizando JavaScript y WordPress.",
+                "en": "Alejandro's work experience includes:\n\n* **Ensolvers** (Software Engineer, Remote, USA, Feb 2024 - Present): React application migration, AWS SDK update, development with Node.js (NestJS), React and Java (Spring Boot), and CI/CD pipeline maintenance.\n\n* **Freelance Web Developer** (Santa Fe, Argentina, Feb 2022 - May 2024): Client management and custom web project development.\n\n* **Coverit** (Web Developer, Santa Fe, Argentina, Feb 2022 - Aug 2023): Web page development using JavaScript and WordPress."
+            }
+        },
+        {
+            "questions": {
+                "es": ["¿Cómo puedo ver el CV de Alejandro?", "CV", "currículum", "hoja de vida", "descargar cv"],
+                "en": ["How can I see Alejandro's CV?", "CV", "resume", "download cv"]
+            },
+            "answer": {
+                "es": "Puedes previsualizar el CV de Alejandro haciendo clic en la opción CV del menú.  Luego podrás elegir el idioma (Español o Inglés).",
+                "en": "You can preview Alejandro's CV by clicking the CV option in the menu.  Then you will be able to choose the language (Spanish or English)."
             }
         }
     ]

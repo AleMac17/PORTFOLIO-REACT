@@ -40,15 +40,16 @@ const ChatBot = () => {
     }, [messages]);
 
     useEffect(() => {
-        setMessages([
+        const initialMessages = [
             {
                 text:
                     language === 'es'
-                        ? '¡Hola! Soy un chatbot. ¿En qué puedo ayudarte?'
-                        : 'Hello! I am a chatbot. How can I help you?',
+                        ? '¡Hola! Soy un chatbot. ¿En qué puedo ayudarte? Escribe "ayuda" o "help" si no sabes qué preguntar.'
+                        : 'Hello! I am a chatbot. How can I help you? Type "help" if you don\'t know what to ask.',
                 sender: 'bot',
             },
-        ]);
+        ];
+        setMessages(initialMessages);
     }, [language]);
 
     const handleUserInput = (event) => {
@@ -80,15 +81,11 @@ const ChatBot = () => {
             });
 
             if (sentence.ngrams) {
-                if (sentence.ngrams.bigrams) {
-                    keywords = keywords.concat(sentence.ngrams.bigrams);
-                }
-                if (sentence.ngrams.trigrams) {
-                    keywords = keywords.concat(sentence.ngrams.trigrams);
-                }
-                if (sentence.ngrams.unigrams) {
-                    keywords = keywords.concat(sentence.ngrams.unigrams);
-                }
+                ['unigrams', 'bigrams', 'trigrams'].forEach((gramType) => {
+                    if (sentence.ngrams[gramType]) {
+                        keywords = keywords.concat(sentence.ngrams[gramType]);
+                    }
+                });
             }
         });
 
@@ -134,6 +131,8 @@ const ChatBot = () => {
                 'para',
                 'como',
                 'al',
+                'del',
+                'ha',
             ],
             en: [
                 'the',
@@ -185,12 +184,13 @@ const ChatBot = () => {
                 'she',
                 "i'm",
                 'so',
+                'by',
             ],
         };
 
         keywords = keywords.filter(
             (keyword) =>
-                keyword.length > 2 &&
+                keyword.length >= 2 &&
                 !(stopWords[language] || []).includes(keyword),
         );
         return keywords;
@@ -202,39 +202,53 @@ const ChatBot = () => {
         const lowerCaseUserQuestion = userQuestion.trim().toLowerCase();
         const userKeywords = extractKeywords(lowerCaseUserQuestion, language);
 
-        let bestAnswer =
-            language === 'es'
-                ? 'Lo siento, no tengo información sobre eso.'
-                : "Sorry, I don't have information about that.";
+        let bestAnswer = '';
         let bestMatchRatio = 0;
+        let foundMatch = false;
 
-        knowledgeBaseData.knowledgeBase.forEach((entry) => {
-            const questions = entry.questions[language];
-            if (!questions) {
-                return;
-            }
+        if (
+            lowerCaseUserQuestion === 'help' ||
+            lowerCaseUserQuestion === 'ayuda'
+        ) {
+            bestAnswer =
+                language === 'es'
+                    ? 'Puedes preguntar sobre: trabajo actual, tecnologías, experiencia, habilidades, idiomas, educación.'
+                    : 'You can ask about: current job, technologies, experience, skills, languages, education.';
+            foundMatch = true;
+        } else {
+            knowledgeBaseData.knowledgeBase.forEach((entry) => {
+                const questions = entry.questions[language];
+                if (!questions) return;
 
-            questions.forEach((question) => {
-                const lowerCaseQuestion = question.trim().toLowerCase();
-                const questionKeywords = extractKeywords(
-                    lowerCaseQuestion,
-                    language,
-                );
+                questions.forEach((question) => {
+                    const lowerCaseQuestion = question.trim().toLowerCase();
+                    const questionKeywords = extractKeywords(
+                        lowerCaseQuestion,
+                        language,
+                    );
+                    const intersection = userKeywords.filter((keyword) =>
+                        questionKeywords.includes(keyword),
+                    );
+                    const matchRatio =
+                        questionKeywords.length > 0
+                            ? intersection.length / questionKeywords.length
+                            : 0;
 
-                const intersection = userKeywords.filter((keyword) =>
-                    questionKeywords.includes(keyword),
-                );
-                const matchRatio =
-                    questionKeywords.length > 0
-                        ? intersection.length / questionKeywords.length
-                        : 0;
-
-                if (matchRatio > bestMatchRatio) {
-                    bestMatchRatio = matchRatio;
-                    bestAnswer = entry.answer[language] || bestAnswer;
-                }
+                    if (matchRatio > bestMatchRatio) {
+                        bestMatchRatio = matchRatio;
+                        bestAnswer = entry.answer[language];
+                        foundMatch = true;
+                    }
+                });
             });
-        });
+        }
+
+        if (!foundMatch) {
+            bestAnswer =
+                language === 'es'
+                    ? 'Lo siento, no tengo información sobre eso. Prueba con palabras clave como: trabajo, tecnologías, experiencia, habilidades, idiomas, educación.'
+                    : "Sorry, I don't have information about that. Try keywords like: job, technologies, experience, skills, languages, education.";
+        }
 
         setTimeout(() => {
             setMessages((prevMessages) => [
@@ -251,8 +265,8 @@ const ChatBot = () => {
             {
                 text:
                     value === 'es'
-                        ? '¡Hola! Soy un chatbot. ¿En qué puedo ayudarte?'
-                        : 'Hello! I am a chatbot. How can I help you?',
+                        ? '¡Hola! Soy un chatbot. ¿En qué puedo ayudarte? Escribe "ayuda" o "help" si no sabes qué preguntar.'
+                        : 'Hello! I am a chatbot. How can I help you? Type "help" if you don\'t know what to ask.',
                 sender: 'bot',
             },
         ]);
@@ -334,57 +348,84 @@ const ChatBot = () => {
                                 >
                                     <AnimatePresence>
                                         {messages.map((message, index) => {
-                                            const variants = {
-                                                hidden: {
-                                                    opacity: 0,
-                                                    scale: 0.5,
-                                                    y:
-                                                        message.sender ===
-                                                        'user'
-                                                            ? 20
-                                                            : -20,
-                                                },
-                                                visible: {
-                                                    opacity: 1,
-                                                    scale: 1,
-                                                    y: 0,
-                                                    transition: {
-                                                        type: 'spring',
-                                                        stiffness: 120,
-                                                        damping: 15,
-                                                        delay: 0.1,
-                                                    },
-                                                },
-                                                exit: {
-                                                    opacity: 0,
-                                                    scale: 0.6,
-                                                    y:
-                                                        message.sender ===
-                                                        'user'
-                                                            ? -20
-                                                            : 20,
-                                                    transition: {
-                                                        duration: 0.2,
-                                                        ease: 'easeOut',
-                                                    },
-                                                },
-                                            };
+                                            const variants =
+                                                message.sender === 'user'
+                                                    ? {
+                                                          hidden: {
+                                                              opacity: 0,
+                                                              x: 20,
+                                                          },
+                                                          visible: {
+                                                              opacity: 1,
+                                                              x: 0,
+                                                              transition: {
+                                                                  type: 'spring',
+                                                                  stiffness: 120,
+                                                                  damping: 15,
+                                                                  delay: 0.1,
+                                                              },
+                                                          },
+                                                          exit: {
+                                                              opacity: 0,
+                                                              x: -20,
+                                                              transition: {
+                                                                  duration: 0.2,
+                                                                  ease: 'easeOut',
+                                                              },
+                                                          },
+                                                      }
+                                                    : {
+                                                          hidden: {
+                                                              opacity: 0,
+                                                              scale: 0.95,
+                                                              y: -5,
+                                                          },
+                                                          visible: {
+                                                              opacity: 1,
+                                                              scale: 1,
+                                                              y: 0,
+                                                              transition: {
+                                                                  type: 'spring',
+                                                                  stiffness: 150,
+                                                                  damping: 18,
+                                                                  delay: 0.1,
+                                                              },
+                                                          },
+                                                          exit: {
+                                                              opacity: 0,
+                                                              scale: 0.9,
+                                                              y: 10,
+                                                              transition: {
+                                                                  duration: 0.15,
+                                                                  ease: 'easeOut',
+                                                              },
+                                                          },
+                                                      };
 
                                             return (
                                                 <motion.div
                                                     key={index}
-                                                    className={`flex w-fit max-w-[75%] rounded-xl px-4 py-2 text-white ${
+                                                    className={`flex items-center ${
                                                         message.sender ===
                                                         'user'
-                                                            ? 'bg-blue-600 ml-auto rounded-br-none'
-                                                            : 'bg-gray-700 mr-auto rounded-bl-none'
+                                                            ? 'justify-end'
+                                                            : 'justify-start'
                                                     }`}
                                                     variants={variants}
                                                     initial="hidden"
                                                     animate="visible"
                                                     exit="exit"
                                                 >
-                                                    {message.text}
+                                                    <div
+                                                        className={`flex w-fit max-w-[75%] rounded-xl px-4 py-2 text-white ${
+                                                            message.sender ===
+                                                            'user'
+                                                                ? 'bg-blue-600 rounded-br-none'
+                                                                : 'bg-gray-700 rounded-bl-none'
+                                                        }`}
+                                                    >
+                                                        {message.text}
+                                                    </div>
                                                 </motion.div>
                                             );
                                         })}
