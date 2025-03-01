@@ -28,7 +28,7 @@ const ChatBot = () => {
     const [messages, setMessages] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [isOpen, setIsOpen] = useState(false);
-    const [language, setLanguage] = useState('es');
+    const [language, setLanguage] = useState('en');
     const [isBotTyping, setIsBotTyping] = useState(false);
     const chatWindowRef = useRef(null);
 
