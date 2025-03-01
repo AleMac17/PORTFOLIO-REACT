@@ -1,10 +1,12 @@
 'use client';
 
+import { useMenu } from '@/context/MenuContext';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
 export default function ScrollTracker() {
+    const { isMenuOpen } = useMenu();
     const { scrollYProgress } = useScroll();
 
     const strokeOffset = useTransform(scrollYProgress, [0, 1], [251.2, 0]);
@@ -28,6 +30,8 @@ export default function ScrollTracker() {
         return () => unsubscribe();
     }, [scrollYProgress]);
 
+    if (isMenuOpen) return null;
+    
     return (
         <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
             <motion.div

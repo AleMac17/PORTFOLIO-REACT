@@ -1,0 +1,271 @@
+{
+    "knowledgeBase": [
+        {
+            "questions": {
+                "es": [
+                    "¿En qué empresa trabaja actualmente Alejandro?",
+                    "¿Cuál es el puesto actual de Alejandro?",
+                    "¿Dónde trabaja Alejandro actualmente?",
+                    "¿Desde cuándo trabaja Alejandro en Ensolvers?",
+                    "trabajo actual alejandro"
+                ],
+                "en": [
+                    "What company does Alejandro currently work for?",
+                    "What is Alejandro's current position?",
+                    "Where does Alejandro currently work?",
+                    "Since when has Alejandro been working at Ensolvers?",
+                    "alejandro current job"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro trabaja actualmente como Software Engineer en Ensolvers, de forma remota desde EE.UU., desde febrero de 2024.",
+                "en": "Alejandro currently works as a Software Engineer at Ensolvers, remotely from the USA, since February 2024."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué tareas realizó Alejandro en Ensolvers?",
+                    "¿Cuáles son las responsabilidades de Alejandro en Ensolvers?",
+                    "¿En qué proyectos ha trabajado Alejandro en Ensolvers?",
+                    "proyectos Ensolvers",
+                    "responsabilidades Ensolvers"
+                ],
+                "en": [
+                    "What tasks did Alejandro perform at Ensolvers?",
+                    "What are Alejandro's responsibilities at Ensolvers?",
+                    "What projects has Alejandro worked on at Ensolvers?",
+                    "Ensolvers projects",
+                    "Ensolvers responsibilities"
+                ]
+            },
+            "answer": {
+                "es": "En Ensolvers, Alejandro ha migrado aplicaciones de React de la versión 17 a la 18, actualizado AWS SDK en un proyecto Java, revisado y resuelto vulnerabilidades, desarrollado recursos y servicios en Node.js (NestJS), React y Java (Spring Boot), creado y modificado componentes en React, y desarrollado y mantenido pipelines de CI/CD.",
+                "en": "At Ensolvers, Alejandro has migrated React applications from version 17 to 18, updated the AWS SDK in a Java project, reviewed and resolved vulnerabilities, developed resources and services in Node.js (NestJS), React, and Java (Spring Boot), created and modified React components, and developed and maintained CI/CD pipelines."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué experiencia tiene alejandro en migraciones de React?",
+                    "migraciones React"
+                ],
+                "en": [
+                    "What experience does Alejandro have with React migrations?",
+                    "React migrations"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro migró exitosamente una aplicación de React de la versión 17 a la 18, actualizando y reemplazando dependencias obsoletas, y refactorizando el código.",
+                "en": "Alejandro successfully migrated a React application from version 17 to 18, updating and replacing obsolete dependencies, and refactoring the code."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué experiencia tiene Alejandro con AWS SDK?",
+                    "experiencia AWS",
+                    "AWS SDK"
+                ],
+                "en": [
+                    "What experience does Alejandro have with AWS SDK?",
+                    "AWS experience",
+                    "AWS SDK"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro actualizó el AWS SDK de la versión 1 a la 2 en un proyecto Java, refactorizando código, ajustando dependencias y realizando pruebas de integración.",
+                "en": "Alejandro updated the AWS SDK from version 1 to 2 in a Java project, refactoring code, adjusting dependencies, and performing integration tests."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué experiencia tiene Alejandro en seguridad de aplicaciones?",
+                    "seguridad aplicaciones",
+                    "vulnerabilidades"
+                ],
+                "en": [
+                    "What experience does Alejandro have in application security?",
+                    "application security",
+                    "vulnerabilities"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro ha revisado y resuelto vulnerabilidades en dependencias de proyectos Java, garantizando la seguridad y estabilidad del entorno de desarrollo.",
+                "en": "Alejandro has reviewed and resolved vulnerabilities in Java project dependencies, ensuring the security and stability of the development environment."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué tecnologías back-end maneja Alejandro?",
+                    "tecnologías back-end",
+                    "backend"
+                ],
+                "en": [
+                    "What back-end technologies does Alejandro use?",
+                    "back-end technologies",
+                    "backend"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro tiene experiencia desarrollando con Node.js (NestJS) y Java (Spring Boot).",
+                "en": "Alejandro has experience developing with Node.js (NestJS) and Java (Spring Boot)."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué tecnologías front-end maneja Alejandro?",
+                    "tecnologías front-end",
+                    "frontend"
+                ],
+                "en": [
+                    "What front-end technologies does Alejandro use?",
+                    "front-end technologies",
+                    "frontend"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro tiene experiencia desarrollando con HTML, CSS, SCSS, Bootstrap, Tailwind CSS, JavaScript y React.js.",
+                "en": "Alejandro has experience developing with HTML, CSS, SCSS, Bootstrap, Tailwind CSS, JavaScript, and React.js."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué tecnologías maneja Alejandro?",
+                    "tecnologías",
+                    "tecnologías generales"
+                ],
+                "en": [
+                    "What technologies does Alejandro use?",
+                    "technologies",
+                    "general technologies"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro tiene experiencia con HTML, CSS, SCSS, Bootstrap, Tailwind CSS, WordPress, JavaScript (React.js, Node.js), Java (Spring Boot), SQL, MongoDB, y AWS.",
+                "en": "Alejandro has experience with HTML, CSS, SCSS, Bootstrap, Tailwind CSS, WordPress, JavaScript (React.js, Node.js), Java (Spring Boot), SQL, MongoDB, and AWS."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué experiencia tiene Alejandro con CI/CD?",
+                    "CI/CD",
+                    "pipelines"
+                ],
+                "en": [
+                    "What experience does Alejandro have with CI/CD?",
+                    "CI/CD",
+                    "pipelines"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro ha desarrollado y mantenido pipelines de CI/CD integradas con Bitbucket y SonarQube.",
+                "en": "Alejandro has developed and maintained CI/CD pipelines integrated with Bitbucket and SonarQube."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué experiencia tiene Alejandro como desarrollador web independiente?",
+                    "experiencia independiente",
+                    "freelance"
+                ],
+                "en": [
+                    "What experience does Alejandro have as an independent web developer?",
+                    "independent experience",
+                    "freelance"
+                ]
+            },
+            "answer": {
+                "es": "Como desarrollador web independiente en Santa Fe, Argentina, desde febrero de 2022 hasta mayo de 2024, Alejandro gestionó clientes, adaptó y resolvió problemas en proyectos a medida, aplicando buenas prácticas de desarrollo y metodologías ágiles.",
+                "en": "As an independent web developer in Santa Fe, Argentina, from February 2022 to May 2024, Alejandro managed clients, adapted and solved problems in custom projects, applying good development practices and agile methodologies."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué tareas realizó Alejandro en Coverit?",
+                    "experiencia Coverit",
+                    "Coverit"
+                ],
+                "en": [
+                    "What tasks did Alejandro perform at Coverit?",
+                    "Coverit experience",
+                    "Coverit"
+                ]
+            },
+            "answer": {
+                "es": "En Coverit, Alejandro desarrolló páginas web en equipo, utilizando JavaScript, WordPress y tecnologías relacionadas, asegurando funcionalidades optimizadas y diseño responsivo.",
+                "en": "At Coverit, Alejandro developed web pages as part of a team, using JavaScript, WordPress, and related technologies, ensuring optimized functionalities and responsive design."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué habilidades técnicas tiene Alejandro?",
+                    "habilidades técnicas",
+                    "skills"
+                ],
+                "en": [
+                    "What technical skills does Alejandro have?",
+                    "technical skills",
+                    "skills"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro tiene habilidades técnicas en HTML, CSS, SCSS, Bootstrap, Tailwind CSS, WordPress; JavaScript (React.js, Node.js); Java (Spring Boot); SQL, MongoDB; AWS, Git, GitHub; Testing (Manual, Caja negra, Caja blanca); Windows, Linux (Ubuntu), Máquinas virtuales; Scrum, Kanban, MVC, APIs RESTful.",
+                "en": "Alejandro has technical skills in HTML, CSS, SCSS, Bootstrap, Tailwind CSS, WordPress; JavaScript (React.js, Node.js); Java (Spring Boot); SQL, MongoDB; AWS, Git, GitHub; Testing (Manual, Black Box, White Box); Windows, Linux (Ubuntu), Virtual Machines; Scrum, Kanban, MVC, RESTful APIs."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Qué idiomas habla Alejandro?",
+                    "idiomas",
+                    "lenguajes"
+                ],
+                "en": [
+                    "What languages does Alejandro speak?",
+                    "languages"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro habla español (nativo) e inglés (C2).",
+                "en": "Alejandro speaks Spanish (native) and English (C2)."
+            }
+        },
+        {
+            "questions": {
+                "es": [
+                    "¿Cuál es la formación académica de Alejandro?",
+                    "educación",
+                    "estudios"
+                ],
+                "en": [
+                    "What is Alejandro's educational background?",
+                    "education",
+                    "studies"
+                ]
+            },
+            "answer": {
+                "es": "Alejandro está cursando el último año de la Licenciatura en Relaciones Internacionales en la Universidad Católica de Santa Fe, Argentina.",
+                "en": "Alejandro is in the final year of his Bachelor's degree in International Relations at the Catholic University of Santa Fe, Argentina."
+            }
+        },
+        {
+            "questions": {
+                "es": ["¿Experiencia con React?"],
+                "en": ["Experience with React?"]
+            },
+            "answer": {
+                "es": "Alejandro tiene experiencia en React, incluyendo la migración de aplicaciones de la versión 17 a la 18 y la creación/modificación de componentes.",
+                "en": "Alejandro has experience in React, including migrating applications from version 17 to 18 and creating/modifying components."
+            }
+        }
+    ]
+}
